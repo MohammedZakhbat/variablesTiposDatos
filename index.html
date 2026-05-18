@@ -2,133 +2,106 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
     <title>Variables y Tipos de Datos</title>
 </head>
-<details class="text-sm">
-        <summary class="bg-pink-800">ENUNCIADO</summary>
-        <p> Responde los datos del formulario y termina la funcion Calcular() de manera que al hacer clic en el boton,
-            aparezca el siguiente texto en el parrafo con id totalGatos:
-        </p>
-        <p class="text-center font-serif">"<mark><strong>Nombre Apellidos:</strong></mark> Tugasto fijo total es de
-            <mark>total</mark> euros."</p>
-        <p>Ejemplo: </p>
-        <p class="text-center font-serif"><mark><strong>Pepito Pérez Rojas:</strong></mark> Tu gasto fijo total es de
-            <strong>450</strong> euros."</p>
-    </details>
 
-    <details class="text-sm">
-        <summary class="text-pink-800 font-bold">
-            Tipos de Datos en JavaScript
-        </summary>
-        <div class="flex flex-row">
-            <div class="flex-1 border-1">
-                <p class="px-4 py-2"><strong>Primitivos: </strong> Se accede diractamente al valor. Para saber el tipo
-                    de datos de una variable de usa <a
-                        href="www.aprendejavascript.dev/clase/introduccion/operador-typeof">typeof</a></p>
-                <ul class="[list-style-type:circle] list-outside ml-8 mb3">
-                    <li><strong>string: </strong>Cadena de Texto. Se convierte a numero con la funcion Number.</li>
-                    <li><strong>number: </strong>Valor numérico</li>
-                    <li><strong>bigint: </strong>Numeros enteros mayores a 9007199254740991(2-1). Se representan
-                        anadiendo una <strong>n</strong> al final del numero.</li>
-                    <li><strong>boolean: </strong>Valor logico Verdadero/Falso. (ver <a
-                            href="www.lenguaje.js.com/javascript/tipos/falsy-truthy">Falsy y Truthy</a>)</li>
-                    <li><strong>null: </strong>La variable tiene como valor, <strong>vacio.</strong></li>
-                    <li><strong>undefined:</strong> La variable ha sido declarada pero no tiene valor.</li>
-                    <li><strong>NaN: </strong>Not a Number (no es un numero)</li>
-                </ul>
-            </div>
+<body class="p-2 sm:p-4 h-screen overflow-hidden">
 
-            <div class="flex-1 border-1">
-                <p class="px-4 py-2"><strong>Compuestos: </strong> Se accede la referencia del volar. Lavariable no
-                    guarda los datos, guarda la "ubicacion" en la memoria donde estan esos datos. Si dos variables
-                    apuntan a la misma direccion y una cambia algo, la otra tambien lo vera cambiado. Para saber el tipo
-                    de objeto que se esta trabajando se utiliza <a class="text-blue-600"
-                        href="es.javascript.info/instanceof">instanceof.</a></p>
-                <ul class="[list-style-type:circle] list-outside ml-8 mb3">
-                    <li><strong>Object: </strong>Cadena de Texto. Se convierte a numero con la funcion Number.</li>
-                    <li><strong>array: </strong>Valor numérico</li>
-                    <li><strong>function(): </strong>Numeros enteros mayores a 9007199254740991(2-1). Se representan
-                        anadiendo una <strong>n</strong> al final del numero.</li>
-                    <li><strong>Class: </strong>Valor logico Verdadero/Falso. (ver <a class="text-blue-600"
-                            href="www.lenguaje.js.com/javascript/tipos/falsy-truthy">Falsy y Truthy</a>)</li>
-                </ul>
-            </div>
+<details class="text-sm mb-2">
+    <summary class="bg-pink-800 text-white p-2">ENUNCIADO</summary>
+    <p> Responde los datos del formulario y termina la funcion Calcular()</p>
+</details>
+
+<details class="text-sm mb-2">
+    <summary class="text-pink-800 font-bold">
+        Tipos de Datos en JavaScript
+    </summary>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex-1 border-1">
+            <p class="px-4 py-2"><strong>Primitivos</strong></p>
         </div>
-    </details>
-    <div>
-        <details>
-            <summary class="text-pink-800 font-bold">
-                Ordenamiento del codigo de los programas en JavaScript
-            </summary>
-            <ul class="[list-style-type:circle] list-outside ml-8 mb3">
-                <li>IMPORTANCION DE MODULOS</li>
-                <li>DECLARACION DE VARIABLES</li>
-                <li>DECLARACION DE FUNCIONES</li>
-                <li>EJERCUCION DE CODIGO</li>
-            </ul>
-        </details>
+
+        <div class="flex-1 border-1">
+            <p class="px-4 py-2"><strong>Compuestos</strong></p>
+        </div>
     </div>
-<form class="w-3/4 p-6 m-2 bg-gray-100 rounded-lg shadow-md">
-    <h1 class="text-pink-800 font-bold text-xl mb-4">Gastos de la casa</h1>
+</details>
+
+<div>
+    <details>
+        <summary class="text-pink-800 font-bold">
+            Ordenamiento del codigo de los programas en JavaScript
+        </summary>
+    </details>
+</div>
+
+<form class="w-full sm:w-3/4 mx-auto p-4 sm:p-6 m-2 bg-gray-100 rounded-lg shadow-md max-h-[95vh] overflow-y-auto">
+
+    <h1 class="text-pink-800 font-bold text-xl mb-4">
+        Gastos de la casa
+    </h1>
 
     <p class="font-bold mb-4">
         Todo lo que viene del HTML es un string (texto) y hay que convertirlo
     </p>
 
-    
-    <div class="flex items-center mb-3">
-        <label class="w-1/3 text-right pr-4" for="nombre">Tu nombre:</label>
-        <input class="w-2/3 border rounded px-2 py-1" type="text" id="nombre">
+    <div class="flex flex-col sm:flex-row sm:items-center mb-3">
+        <label class="w-full sm:w-1/3 sm:text-right pr-4" for="nombre">Tu nombre:</label>
+        <input class="w-full sm:w-2/3 border rounded px-2 py-1" type="text" id="nombre">
     </div>
 
-    
-    <div class="flex items-center mb-4">
-        <label class="w-1/3 text-right pr-4" for="apellido">Apellido(s):</label>
-        <input class="w-2/3 border rounded px-2 py-1" type="text" id="apellido">
+    <div class="flex flex-col sm:flex-row sm:items-center mb-4">
+        <label class="w-full sm:w-1/3 sm:text-right pr-4" for="apellido">Apellido(s):</label>
+        <input class="w-full sm:w-2/3 border rounded px-2 py-1" type="text" id="apellido">
     </div>
 
-    
     <fieldset class="border border-pink-800 p-4 mb-4">
         <legend class="bg-pink-800 text-white px-3 py-1">
             Gastos fijos
         </legend>
 
-        <div class="flex items-center mb-2">
-            <label class="w-1/3 text-right pr-4 ">Internet:</label>
-            <input class="w-2/3 border rounded px-2 py-1 text-pink-800" id="internet" value="43" type="number">
+        <div class="flex flex-col sm:flex-row sm:items-center mb-2">
+            <label class="w-full sm:w-1/3 sm:text-right pr-4">Internet:</label>
+            <input class="w-full sm:w-2/3 border rounded px-2 py-1 text-pink-800" id="internet" value="43" type="number">
         </div>
 
-        <div class="flex items-center mb-2">
-            <label class="w-1/3 text-right pr-4">Luz:</label>
-            <input class="w-2/3 border rounded px-2 py-1" id="luz" type="text">
+        <div class="flex flex-col sm:flex-row sm:items-center mb-2">
+            <label class="w-full sm:w-1/3 sm:text-right pr-4">Luz:</label>
+            <input class="w-full sm:w-2/3 border rounded px-2 py-1" id="luz" type="text">
         </div>
 
-        <div class="flex items-center mb-2">
-            <label class="w-1/3 text-right pr-4">Agua:</label>
-            <input class="w-2/3 border rounded px-2 py-1" id="agua" type="text">
+        <div class="flex flex-col sm:flex-row sm:items-center mb-2">
+            <label class="w-full sm:w-1/3 sm:text-right pr-4">Agua:</label>
+            <input class="w-full sm:w-2/3 border rounded px-2 py-1" id="agua" type="text">
         </div>
 
-        <div class="flex items-center mb-2">
-            <label class="w-1/3 text-right pr-4">Gas:</label>
-            <input class="w-2/3 border rounded px-2 py-1" id="gas" type="text">
+        <div class="flex flex-col sm:flex-row sm:items-center mb-2">
+            <label class="w-full sm:w-1/3 sm:text-right pr-4">Gas:</label>
+            <input class="w-full sm:w-2/3 border rounded px-2 py-1" id="gas" type="text">
         </div>
 
-        <div class="flex items-center">
-            <label class="w-1/3 text-right pr-4">Alquiler:</label>
-            <input class="w-2/3 border rounded px-2 py-1" id="alquiler" type="text">
+        <div class="flex flex-col sm:flex-row sm:items-center">
+            <label class="w-full sm:w-1/3 sm:text-right pr-4">Alquiler:</label>
+            <input class="w-full sm:w-2/3 border rounded px-2 py-1" id="alquiler" type="text">
         </div>
     </fieldset>
+
     <button 
         id="btnCalcular"
         type="button"
         onclick="calcular()"
-        class="border border-pink-800 text-pink-800 px-4 py-2 rounded hover:bg-pink-800 hover:text-white transition">
+        class="w-full sm:w-auto border border-pink-800 text-pink-800 px-4 py-2 rounded hover:bg-pink-800 hover:text-white transition">
         Calcular Gastos
     </button>
 
-    <p id="totalGastos"  class="mt-4 font-semibold border border-pink-800 p-2 h-10"></p>
+    <p id="totalGastos" class="mt-4 font-semibold border border-pink-800 p-2 h-10"></p>
+
 </form>
-    <script src="app.js"></script>
+
+<script src="app.js"></script>
+
 </body>
 </html>
